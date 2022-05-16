@@ -1,0 +1,496 @@
+.el-button
+  min-width: 160px
+  font-family: $second-font-stack
+  color: #FFFFFF
+  line-height: 24px
+  letter-spacing: -0.01em
+  padding: 8px 0
+  border-radius: 4px
+  &--action
+    background: #50287D
+    &:hover
+      color: #50287d
+      background-color: #d3c9df
+      border-color: #735397
+  &:focus
+    color: #FFFFFF
+    background: #50287D
+    border-color: unset
+
+.el-alert
+  &--success.is-light
+    border: 1px solid $first-color
+    background-color: #ffffff
+    color: $first-color
+
+  &--error.is-light
+    border: 1px solid $error-color
+    background-color: #ffffff
+    color: $error-color
+
+.el-autocomplete
+  max-width: 100%
+  width: 100%
+
+.el-select
+  max-width: 100%
+  width: 100%
+
+  .el-input
+    .el-select__caret.is-reverse
+      transform: rotate(180deg)
+
+  &-dropdown
+    max-width: 100%
+    margin-right: -5px
+    border-color: #DBDFE4
+
+    &__list
+      max-width: 100%
+      width: 100%
+
+    &__item
+      height: auto
+      padding-top: 7px
+      padding-bottom: 7px
+      font-size: $font-size + 2
+      color: #28323C
+      line-height: 1.3
+      white-space: normal
+
+      &.hover
+        background-color: #EAE6ED
+
+      &.selected
+        font-weight: 400
+        color: #fff
+        background-color: $second-color-dark
+
+.el-popper[x-placement^=bottom]
+  & .popper__arrow
+    border-bottom-color: #DBDFE4
+
+.el-popper[x-placement^=top]
+  & .popper__arrow
+    border-top-color: #DBDFE4
+
+.el-form
+  &--label-top
+    & .el-form
+      &-item
+        &__label
+          padding-bottom: 8px
+          font-size: 14px
+          line-height: 16px
+          letter-spacing: 0.015em
+          color: $black
+
+  &_flex
+    & .el-form-item__content
+      display: flex
+      align-items: center
+
+.el-tabs
+  &__nav
+    width: 100%
+
+  &__nav-scroll
+    padding-bottom: 6px
+
+  &__nav-wrap:after
+    bottom: 6px
+
+  &__active-bar
+    min-width: 50%
+
+    &:after,
+    &:before
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      width: 0
+      height: 0
+      border-width: 8px 10px 0
+      border-style: solid
+      content: ""
+
+    &:before
+      bottom: -6px
+      border-color: $first-color transparent transparent
+
+    &:after
+      bottom: -3px
+      border-color: #fff transparent transparent
+
+  &__item
+    width: 50%
+    padding-top: 6px
+    padding-bottom: 15px
+    padding-left: 12px
+    padding-right: 12px
+    opacity: 0.7
+    font-family: $main-font-stack
+    font-size: $font-size
+    color: $gray
+    text-align: center
+    font-weight: 400
+    line-height: 1.15
+    text-transform: none
+
+    +for-tablet-landscape-up
+      font-size: $font-size + 4
+
+    &.is-active,
+    &:hover
+      color: $gray
+      opacity: 1
+
+.el-table
+  &--striped
+    & .el-table__body
+      tr
+        &.el-table__row--striped
+          td
+            background: #F2F6FA
+
+  &::before
+    height: 0
+
+  &__header,
+  &__body
+    min-width: 100%
+
+  & .cell
+    overflow: visible
+    word-break: normal
+
+  th
+    padding: 16px 0
+    letter-spacing: 0.015em
+
+    &:first-child
+      padding-left: 30px
+
+    &:last-child
+      padding-right: 30px
+
+    &.is-leaf
+      border-color: #DBDFE4
+
+    .cell
+      color: #5A646E
+      font-size: $font-size
+      font-weight: 500
+
+  td
+    padding: 16px 0
+    letter-spacing: 0.015em
+    border-color: #DBDFE4
+
+    &:first-child
+      padding-left: 30px
+
+    &:last-child
+      padding-right: 30px
+
+    .cell
+      color: $black
+      font-size: $font-size
+      font-weight: 400
+
+  &--enable-row-hover
+    & .el-table__body
+      tr:hover > td
+        background-color: rgba(242, 201, 76, 0.05)
+
+  &--enable-row-transition
+    &::before
+      height: 1px
+
+  &--border
+    border: 1px solid #DBDFE4
+
+    &::after
+      height: 0
+
+    th,
+    td
+      border-right: none
+
+    &.el-loading-parent--relative
+      border-color: #DBDFE4
+
+.el-checkbox
+  display: flex
+  align-items: center
+  white-space: normal
+
+  &__inner
+    width: 32px
+    height: 32px
+    border-color: $second-color-dark
+    border-radius: 2px
+
+    &:hover
+      background-color: #EAE6ED
+      border-color: $second-color-dark
+
+    &:focus,
+    &:active
+      background-color: $second-color
+      border-color: $second-color-dark
+
+    &:after
+      top: 7px
+      left: 13px
+      width: 5px
+      height: 10px
+      border-width: 1.5px
+      border-color: $second-color-dark
+
+  &__input
+    font-size: 0
+
+    &.is-focus
+
+      & .el-checkbox__inner
+        border-color: $second-color-dark
+
+    &.is-disabled
+
+      & .el-checkbox__inner
+        background-color: #fff
+        border-color: #C5CBD0
+
+    &.is-checked
+      .el-checkbox__inner
+        background-color: transparent
+        border-color: $second-color-dark
+
+      &.is-disabled
+        & .el-checkbox__inner
+          background-color: #fff
+          border-color: #C5CBD0
+
+.el-loading-mask
+  z-index: 99
+
+.el-form-item
+  &__label
+    line-height: 10px
+
+  &__error
+    color: #C22347
+
+  &.is-error
+
+    & .el-input,
+    & .el-textarea
+      &__inner
+        border-color: #C22347
+
+        &:hover,
+        &:focus,
+        &.active
+          border-color: #C22347
+
+.el-textarea
+  &__inner
+    padding-top: 12px
+    padding-bottom: 12px
+    font-family: $main-font-stack
+    border-color: #C5CBD0
+
+    &:hover
+      border-color: $second-color-dark
+
+    &:focus,
+    &:active
+      border-color: $second-color-dark
+
+  &.is-disabled
+    & .el-textarea__inner
+      padding-top: 12px
+      padding-bottom: 12px
+      background-color: #fff
+
+      &:hover
+        border-color: #E4E7ED
+
+.el-input
+  &--suffix
+    & .el-input__inner
+      padding-right: 36px
+
+  &.text-center
+    & .el-input__inner
+      text-align: center
+
+    &.el-date-editor--daterange
+      max-width: 100%
+      width: 270px
+
+      .el-range
+        &-separator
+          height: auto
+          line-height: 1
+
+        &-input
+          width: calc(50% - 30px)
+
+  &__inner
+    max-width: 100%
+    width: 100%
+    border-color: #C5CBD0
+    font-family: $main-font-stack
+
+    &:hover
+      border-color: $second-color-dark
+
+    &:focus,
+    &:active
+      border-color: $second-color-dark
+
+  &.is-disabled
+    & .el-input__inner
+      background-color: #fff
+
+      &:hover
+        border-color: #E4E7ED
+
+  &-group
+    &__prepend
+      padding-left: 10px
+      padding-right: 10px
+
+.el-date
+  &-picker
+    table
+      font-size: $font-size + 2
+
+  &-editor
+    &.el-input,
+    &.el-input__inner
+      max-width: 100%
+      width: 100%
+
+    & .el-range-input
+      letter-spacing: 0.01em
+
+.el-picker-panel
+  border-color: #DBDFE4
+
+.el-tooltip
+  &__popper
+    &.is-dark
+      background: #463277
+      border: 1px solid #463277
+      border-radius: 2px
+      font-size: $font-size
+
+    &[x-placement^=top]
+      & .popper__arrow
+        border-top-color: #463277
+        &:after
+          border-top-color: #463277
+
+    &[x-placement^=left]
+      & .popper__arrow
+        border-left-color: #463277
+        &:after
+          border-left-color: #463277
+
+    &[x-placement^=right]
+      & .popper__arrow
+        border-right-color: #463277
+        &:after
+          border-right-color: #463277
+
+    &[x-placement^=bottom]
+      & .popper__arrow
+        border-bottom-color: #463277
+        &:after
+          border-bottom-color: #463277
+
+.el-message
+  &--error
+    &.is-closable
+      & .el-message
+        &__content
+          padding-right: 24px
+
+    & .el-icon
+      &-error
+        display: none
+
+.el-radio
+  position: relative
+  display: flex
+  align-items: center
+
+  &__inner
+    width: 32px
+    height: 32px
+    border: 1px solid $second-color-dark
+
+    &:after
+      width: 10px
+      height: 10px
+
+    &:hover
+      border: 1px solid $second-color-dark
+
+  .el-radio:focus:not(.is-focus):not(:active):not(.is-disabled) .el-radio__inner
+    box-shadow: none
+
+  &__input.is-checked .el-radio__inner
+    border: 1px solid $second-color-dark
+    background: #fff
+
+    &:after
+      background-color: $second-color-dark
+
+  &__label
+    display: block
+    font-size: $font-size + 2
+    white-space: normal
+
+  &.is-bordered
+    height: auto
+    padding: 29px 10px
+    border: 1px solid $second-color-dark
+
+    & .el-radio__label
+      color: $black
+
+    &.is-checked
+      background-image: linear-gradient(21.55deg, #48276F 0.01%, #533F84 48.96%, #7E6EA4 100%)
+
+      & .el-radio__label
+        color: #ffffff
+
+  &-button
+    &__inner,
+    &:first-child .el-radio-button__inner
+      border-color: $second-color-dark
+
+    &.is-disabled
+      opacity: .5
+
+    &__orig-radio
+      &:checked + .el-radio-button__inner
+        border-color: $second-color-dark
+        background-color: $second-color
+        box-shadow: none
+
+      &:disabled:checked + .el-radio-button__inner
+        background-color: $second-color
+        color: #fff
+        border-color: $second-color-dark
+
+      &:disabled + .el-radio-button__inner
+        color: $black
+        border-color: $second-color-dark
+
+    &:focus:not(.is-focus):not(:active):not(.is-disabled)
+      box-shadow: none

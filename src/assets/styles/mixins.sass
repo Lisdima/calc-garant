@@ -1,0 +1,33 @@
+@import './variables.sass'
+
+@mixin for-mobile-up
+  @media screen and (min-width: $mobile)
+    @content
+
+@mixin for-tablet-portrait-up
+  @media screen and (min-width: $tablet-port)
+    @content
+
+@mixin for-big-tablet-portrait-up
+  @media screen and (min-width: $tablet-big-port)
+    @content
+
+@mixin for-tablet-small-landscape-up
+  @media screen and (min-width: $tablet-small-land)
+    @content
+
+@mixin for-tablet-middle-landscape-up
+  @media screen and (min-width: $tablet-middle-land)
+    @content
+
+@mixin for-tablet-landscape-up
+  @media screen and (min-width: $tablet-land)
+    @content
+
+@mixin for-desktop-up
+  @media screen and (min-width: $desc)
+    @content
+
+@mixin for-big-desktop-up
+  @media screen and (min-width: $big-desc)
+    @content
