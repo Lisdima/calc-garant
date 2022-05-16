@@ -7,7 +7,7 @@
 <script>
 import Vue from 'vue';
 
-import Cacl from '@/pages/calc/testIndex.vue';
+import Cacl from '@/pages/calc/index.vue';
 
 export default Vue.extend({
   name: 'app',
